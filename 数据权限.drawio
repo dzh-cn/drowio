@@ -1,1 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2023-02-13T05:52:19.703Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.20" etag="Tn7Wl-wthwO5a5IzYnXD" type="github"><diagram name="第 1 页" id="Wp70hgUU0_T9cCO7W-oM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-13T06:45:03.431Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="j0C9WwPkPA6uxuzv59ff" version="20.8.20" type="github">
+  <diagram name="第 1 页" id="Wp70hgUU0_T9cCO7W-oM">
+    <mxGraphModel dx="1128" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JPYrXUNaIH1oXPGnLHvn-1" value="permission_code来源" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JPYrXUNaIH1oXPGnLHvn-3" value="归属厂区编码" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JPYrXUNaIH1oXPGnLHvn-4" value="创建人id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JPYrXUNaIH1oXPGnLHvn-5" value="1.表中增加字段&amp;nbsp;permission_code，入库时查询用户对应值，入库&lt;br&gt;2.查询时，先获取用户所被授权的所有permission_code列表，进行in查询&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;方案1：使用Mybatis拦截器，修改原始sql，添加查询条件。这个有局限，count语句包一层会报错，解析sql比较麻烦，还要判断表有没有permission_code字段&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;方案2：收集用户所有被授权的permission_code，谁用谁取。需要手动写SQL&lt;br&gt;3.问题&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;MybatisPlus查询本期可能不支持，count的问题难解决" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=1;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="460" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
